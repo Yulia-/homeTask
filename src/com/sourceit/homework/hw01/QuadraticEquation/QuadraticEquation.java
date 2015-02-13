@@ -25,11 +25,11 @@ public class QuadraticEquation {
 
             x1 = (( -b + Math.sqrt( d )) / 2 * a );
 
-            System.out.println (x1);
+            System.out.println ("x1 = " + x1);
 
             x2 = (( -b - Math.sqrt( d )) / 2 * a );
 
-            System.out.println (x2);
+            System.out.println ("x2 = " + x2);
         }
 
 
