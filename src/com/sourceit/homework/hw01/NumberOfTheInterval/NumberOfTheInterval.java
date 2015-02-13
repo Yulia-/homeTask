@@ -18,7 +18,7 @@ public class NumberOfTheInterval{
 
 
 
-            if ( r => 26 & r <= 99 ){
+            if ( r > 26 & r < 99 ){
                 System.out.println ("The number is in the interval");
             }
             else {
