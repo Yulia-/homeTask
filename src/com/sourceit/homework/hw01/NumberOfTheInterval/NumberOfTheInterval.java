@@ -13,11 +13,7 @@ public class NumberOfTheInterval{
         for (int i = 5; i<10; i++) {
             System.out.println(r.nextInt(155));
         }
-
-
-
-
-
+        
             if ( r > 26 & r < 99 ){
                 System.out.println ("The number is in the interval");
             }
