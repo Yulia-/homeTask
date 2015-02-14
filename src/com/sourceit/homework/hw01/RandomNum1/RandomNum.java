@@ -3,7 +3,7 @@ package com.sourceit.homework.hw01.RandomNum1;
 /**
  * Created by Юля on 13.02.2015.
  */
-///// After compilation I got this msg: Process finished with exit code 1
+
 import java.util.*;
 public class RandomNum {
     public static void main(String[] args) {
