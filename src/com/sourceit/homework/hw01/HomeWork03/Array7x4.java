@@ -13,7 +13,7 @@ public class Array7x4 {
 
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 4; j++) {
-                arr[i][j] = r.nextInt(11)-5;
+                arr[i][j] = (r.nextInt(11)-5);
                 System.out.println(arr[7][4]);
                 System.out.println( );
 
