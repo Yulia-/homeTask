@@ -17,7 +17,7 @@ public class Array {
         for (int i = 0; i < i1; i++) {
             for (int j = 0; j < j1; j++) {
                 arr[i][j] = (r.nextInt(90)+10);
-                System.out.println(arr[i1][j1]);
+                System.out.println(arr[i][j]);
             }
         }
     }
