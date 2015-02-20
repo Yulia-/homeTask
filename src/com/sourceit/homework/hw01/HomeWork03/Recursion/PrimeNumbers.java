@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * Created by Юля on 20.02.2015.
  */
+// something doesn't work here
 public class PrimeNumbers {
     public static void main(String[] args) {
 
