@@ -23,7 +23,7 @@ public class NaturalNumbersLine {
                 return 2;
             else if ((i%nat(n-1))!=0)
                 return i;
-            else break;
+            else continue;
         }
     }
 
