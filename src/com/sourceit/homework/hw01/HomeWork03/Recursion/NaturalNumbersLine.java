@@ -19,9 +19,9 @@ public class NaturalNumbersLine {
     static int nat( int n){
         for (int i = 2; i < n; i++) {
 
-            if (n == 2 )
+            if (n == 2)
                 return 2;
-            else if ((i%nat(n-1))==0)
+            else if ((i%nat(n-1))!=0)
                 return i;
             else break;
         }
