@@ -5,27 +5,33 @@ import java.util.Scanner;
 /**
  * Created by Юля on 20.02.2015.
  */
-// something doesn't work here
+
 public class PrimeNumbers {
     public static void main(String[] args) {
-
-        Scanner scr = new Scanner(System.in);
         System.out.println("Write down a number:");
+        Scanner scr = new Scanner(System.in);
         int n = scr.nextInt();
-        System.out.println(prime(n));
+        PrimeNumbers prime = new PrimeNumbers();
+        prime.checkNumber(n);
 
     }
-    static int prime( int n){
-        for (int i = 2; i < n; i++) {
 
-            if (n == 2)
-                return 2;
-            else if ((i%prime(n-1))!=0)
-                return i;
-            else continue;
+
+    void checkNumber(int n) {
+        for (int i = 2; i < n; i++) {
+            if (isPrime(i, i - 1))
+                System.out.print(i + "   ");
         }
     }
 
+    boolean isPrime(int p, int k) {
+        if (k == 1) {
+            return true;
+        }
+        if (p % k != 0) {
+            return isPrime(p, k - 1);
+        }
+        return false;
 
+    }
 }
-
