@@ -1,11 +1,9 @@
 package com.sourceit.homework.hw01.HomeWork05;
 
-import com.sourceit.hometask.basic.FractionNumber;
-
 /**
  * Created by Юля on 27.02.2015.
  */
-public class Test1 implements FractionNumber {
+public class FractionNumber implements com.sourceit.hometask.basic.FractionNumber {
     int dividend;
     int divisor;
 
@@ -28,4 +26,5 @@ public class Test1 implements FractionNumber {
     public void setDivisor(int divisor) {
         this.divisor = divisor;
     }
+}
 }
