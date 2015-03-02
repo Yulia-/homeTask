@@ -29,6 +29,7 @@ public class Test {
         System.out.println("Multiplication:" + operation.mul(var1, var2));
         System.out.println("Division:" + operation.div(var1, var2));
 
+
         Random r = new Random();
         FractionNumberImpl [] arr = new FractionNumberImpl [10];
         for (int i = 0; i<arr.length; i++){
@@ -43,9 +44,6 @@ public class Test {
         for (int i=0; i<arr.length; i++)
             System.out.print (arr[i]+" ");
 
-
     }
-
-
 
 }

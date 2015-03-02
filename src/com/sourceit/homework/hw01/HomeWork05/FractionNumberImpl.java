@@ -28,12 +28,6 @@ public class FractionNumberImpl implements com.sourceit.hometask.basic.FractionN
     }
 
     @Override
-    public double doubleValue() {
-
-        return dividend/divisor;
-    }
-
-    @Override
     public void setDivisor(int divisor) {
 
         this.divisor = divisor;
@@ -46,9 +40,22 @@ public class FractionNumberImpl implements com.sourceit.hometask.basic.FractionN
     }
 
     @Override
-    public int compareTo(FractionNumber o) {
+    public double doubleValue() {
+
+        return ((double)dividend/divisor);
+    }
+
+    @Override
+    public int compareTo(FractionNumber obj) {
+        if(doubleValue()<obj.doubleValue()) {
+            return -1;
+        }
+        else if (doubleValue()>obj.doubleValue()){
+            return 1;
+        }
         return 0;
     }
+
 }
 
 
