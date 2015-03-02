@@ -28,7 +28,7 @@ public class Test {
         System.out.println("Subtraction:" + operation.sub(var1, var2));
         System.out.println("Multiplication:" + operation.mul(var1, var2));
         System.out.println("Division:" + operation.div(var1, var2));
-        //System.out.println(operation.parseFractionNumber(String s);
+        System.out.println(operation.parseFractionNumber(String var1);
 
 
         Random r = new Random();
