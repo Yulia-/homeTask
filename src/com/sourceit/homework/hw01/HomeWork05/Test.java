@@ -1,5 +1,6 @@
 package com.sourceit.homework.hw01.HomeWork05;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -37,6 +38,11 @@ public class Test {
             arr [i] = element;
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
+        Arrays.sort(arr);
+        for (int i=0; i<arr.length; i++)
+            System.out.print (arr[i]+" ");
+
 
     }
 
