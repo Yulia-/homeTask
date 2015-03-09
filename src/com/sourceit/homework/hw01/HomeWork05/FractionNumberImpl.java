@@ -6,8 +6,8 @@ import com.sourceit.hometask.basic.FractionNumber;
  * Created by Юля on 28.02.2015.
  */
 public class FractionNumberImpl implements com.sourceit.hometask.basic.FractionNumber {
-    int dividend;
-    int divisor = DEFAULT_DIVISOR_VALUE;
+    private int dividend;
+    private int divisor = DEFAULT_DIVISOR_VALUE;
 
     @Override
     public int getDividend() {
