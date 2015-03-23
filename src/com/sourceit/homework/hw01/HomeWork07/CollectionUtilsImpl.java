@@ -29,7 +29,7 @@ public class CollectionUtilsImpl implements CollectionUtils {
         if (collection1 == null || collection2 == null) {
             throw new NullPointerException("Collection is empty");
         }
-        Collection<Integer> interCall = collection1;
+        Collection<Integer> interCall = new ArrayList<Integer>(collection1);
         interCall.retainAll(collection2);
         return interCall;
     }
@@ -62,8 +62,14 @@ public class CollectionUtilsImpl implements CollectionUtils {
         if (collection1 == null || collection2 == null) {
             throw new NullPointerException("Collection is empty");
         }
-        Collection<Integer> difference = new ArrayList<Integer>(collection1);
-        difference.removeAll(collection2);
+        Collection<Integer> difference1 = new ArrayList<Integer>(collection1);
+        difference1.removeAll(collection2);
+        Collection<Integer> difference2 = new ArrayList<Integer>(collection2);
+        difference2.removeAll(collection1);
+        Collection<Integer> difference = new ArrayList<Integer>();
+        difference.addAll(difference1);
+        difference.addAll(difference2);
+
         return difference;
     }
 }
