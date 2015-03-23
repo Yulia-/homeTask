@@ -25,11 +25,8 @@ public class ListUtilsImpl implements ListUtils {
 
         List<T> sorted = new ArrayList<T>();
         sorted.addAll(list);
-        Collections.sort(sorted, new Comparator<T>() {
-            public int compare(T o1, T o2) {
-                return o1.toString().compareTo(o2.toString());
-            }
-        });
+        Collections.sort(sorted, Collections.reverseOrder());
+
         return sorted;
     }
 }
