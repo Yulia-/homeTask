@@ -12,29 +12,20 @@ public class SetUtilsImpl implements SetUtils {
         if (collection == null || set == null) {
             throw new NullPointerException("Collection or set is empty");
         }
-        ArrayList <Integer> arrayNumbers = new ArrayList<>(collection);
-        ArrayList <String> arrayWords = new ArrayList<>(set);
-        final Map <Integer, String> wordPlusNumber = new TreeMap <> ();
-        for (int i = 0; i < arrayNumbers.size(); i++ ){
-            wordPlusNumber.put(arrayNumbers.get(i), arrayWords.get(i));
-        }
-        /*SortedSet<String> orderedSet = new TreeSet<>(new Comparator<String>() {
+        final ArrayList <Integer> arrayNumbers = new ArrayList<>(collection);
+        final ArrayList <String> arrayWords = new ArrayList<>(set);
+
+        SortedSet<String> sortedSet = new TreeSet<>(new Comparator<String> () {
             @Override
-            public int compare(String o1, String o2) {
-
-                return o1.compareTo(o2);
+            public int compare (String o1, String o2) {
+                if (arrayNumbers.get(arrayWords.indexOf(o1)) > arrayNumbers.get(arrayWords.indexOf(o2))) {
+                    return 1;
+                } else
+                    return -1;
             }
-        }); orderedSet.addAll(set);
-        */
-        Map<Integer, String> sortedMap = new TreeMap<>(new Comparator<Integer>() {
-            public int compare(Integer o1, Integer o2) {
-                return o1.compareTo(o2);
-            }
-        });
-        sortedMap.putAll(wordPlusNumber);
+            });
+        sortedSet.addAll(arrayWords);
 
-        SortedSet<String> sortedSet = new TreeSet<>();
-        sortedSet.addAll(sortedMap.values());
         return sortedSet;
     }
 
