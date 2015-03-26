@@ -4,35 +4,33 @@ import com.sourceit.hometask.collections.MultiValueMap;
 
 import java.util.*;
 
-
 /**
  * Created by Юля on 10.03.2015.
  */
-public class MultiValueMapImpl<K, V> implements MultiValueMap {
+public class MultiValueMapImpl<K, V> implements MultiValueMap<K, V> {
     private Map<K, List<V>> map = new HashMap<>();
 
     @Override
-    public int getCountValues(Object key) {
+    public int getCountValues(K key) {
 
         List count = map.get(key);
         return count.size();
     }
 
     @Override
-    public Object get(Object key) {
+    public V get(Object key) {
         map.get(key);
         return null;
     }
 
     @Override
-    public Iterator getIterator(Object key) {
+    public Iterator getIterator(K key) {
         return map.get(key).iterator();
     }
 
     @Override
-    public Object remove(Object key) {
-        map.remove(key);
-        return map;
+    public List<V> remove(K key) {
+        return map.remove(key);
     }
 
     @Override
@@ -89,5 +87,4 @@ public class MultiValueMapImpl<K, V> implements MultiValueMap {
         return map.entrySet();
     }
 }
-
 
