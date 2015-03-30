@@ -18,9 +18,7 @@ public class PolishStrategy implements CalculationStrategy {
             if (isDelimiter(currentChar)) {
                 continue;
             }
-            if (isPoint(currentChar)) {
-                continue;
-            }
+
             if (currentChar == '(') {
                 operators.add('(');
             } else if (currentChar == ')') {
@@ -36,7 +34,7 @@ public class PolishStrategy implements CalculationStrategy {
                 operators.add(currentChar);
             } else {
                 StringBuilder value = new StringBuilder();
-                while (i < expression.length() && Character.isDigit(expression.charAt(i))){
+                while (i < expression.length() && (Character.isDigit(currentChar)) || (isPoint(currentChar))){
                     value.append(expression.charAt(i++));
                 }
                 numbers.add(Double.parseDouble(value.toString()));
@@ -97,6 +95,6 @@ public class PolishStrategy implements CalculationStrategy {
 
 
     public static void main(String[] args) {
-        System.out.println(new PolishStrategy().calculate("30-18.5"));
+        System.out.println(new PolishStrategy().calculate(String.valueOf(10 * (3.2 + 2.8 ))));
     }
 }
